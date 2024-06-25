@@ -1,0 +1,5 @@
+#!/bin/bash
+read -p "enter the ip to block :" ip
+echo "dropping packets from :" $ip
+sleep 1
+iptables -I INPUT -s $ip -j DROP 
